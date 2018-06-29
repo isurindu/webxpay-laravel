@@ -1,0 +1,26 @@
+{
+    "name": "isurindu/webxpay-laravel",
+    "description": "Webxpay laravel package",
+    "type": "composer-plugin",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Isurindu\\WebxpayLaravel\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "isurindu prabashwara",
+        "email": "hello@isurindu.com"
+    }],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Isurindu\\WebxpayLaravel\\WebxpayServiceProvider"
+            ],
+            "aliases": {
+                "Webxpay": "Isurindu\\WebxpayLaravel\\Facades\\Webxpay"
+            }
+        }
+    }
+}
