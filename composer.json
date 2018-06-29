@@ -1,7 +1,6 @@
 {
     "name": "isurindu/webxpay-laravel",
     "description": "Webxpay laravel package",
-    "type": "composer-plugin",
     "require": {},
     "autoload": {
         "psr-4": {
