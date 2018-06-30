@@ -33,8 +33,10 @@ php artisan vendor:publish --provider="Isurindu\WebxpayLaravel\WebxpayServicePro
 
 in route
 
+```php
 Route::get('payment/{ORDER_ID}', 'PaymentController@index');
 Route::post('payment/verify', 'PaymentController@verify');
+```
 
 in App/Http/Middleware/VerifyCsrfToken.php
 
