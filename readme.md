@@ -17,16 +17,10 @@ In Laravel 5.5 the service provider will automatically get registered. In older 
 ];
 ```
 
-You can publish the config file with:
+You can publish config and views
 
 ```bash
-php artisan vendor:publish --provider="Isurindu\WebxpayLaravel\WebxpayServiceProvider" --tag="config"
-```
-
-You can publish the views file with:
-
-```bash
-php artisan vendor:publish --provider="Isurindu\WebxpayLaravel\WebxpayServiceProvider" --tag="views"
+php artisan vendor:publish --provider="Isurindu\WebxpayLaravel\WebxpayServiceProvider"
 ```
 
 ## Usage
