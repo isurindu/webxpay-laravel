@@ -1,5 +1,9 @@
 # Webxpay Laravel
 
+[![Latest Stable Version](https://poser.pugx.org/isurindu/webxpay-laravel/v/stable)](https://packagist.org/packages/isurindu/webxpay-laravel)
+[![Total Downloads](https://poser.pugx.org/isurindu/webxpay-laravel/downloads)](https://packagist.org/packages/isurindu/webxpay-laravel)
+[![License](https://poser.pugx.org/isurindu/webxpay-laravel/license)](https://packagist.org/packages/isurindu/webxpay-laravel)
+
 ### Installation
 
 You can install the package via composer:
