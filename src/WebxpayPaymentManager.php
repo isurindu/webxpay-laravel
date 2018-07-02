@@ -88,7 +88,7 @@ class WebxpayPaymentManager
         //verify signature
         $signature_status = $rsa->verify($payment, $signature) ? true : false;
         //get payment response in segments
-        //payment format: order_id|order_refference_number|date_time_transaction|payment_gateway_used|status_code|comment;
+        //order_id|order_refference_number|date_time_transaction|status_code|comment|payme nt_gateway_used
         $responseVariables = explode('|', $payment);
 
         //display values
@@ -97,13 +97,15 @@ class WebxpayPaymentManager
 
         return [
             'signature_status'=>$signature_status,
-            'response'=>[
-                'order_id'=>$responseVariables[0],
-                'order_refference_number'=>$responseVariables[1],
-                'date_time_transaction'=>$responseVariables[2],
-                'payment_gateway_used'=>$responseVariables[3],
-                'status_code'=>$responseVariables[4],
-            ],
+            'order_id'=>$responseVariables[0],
+            'order_refference_number'=>$responseVariables[1],
+            'date_time_transaction'=>$responseVariables[2],
+            'status_code'=>$responseVariables[3],
+            'comment'=>$responseVariables[4],
+            'payment_gateway_used'=>$responseVariables[5],
+            'is_transaction_success'=>($responseVariables[3]==0?true:false),
+
+            'response'=>$responseVariables,
             'custom_fields'=>$custom_fields_varible,
         ];
     }
