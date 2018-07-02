@@ -20,7 +20,6 @@ class WebxpayPaymentManager
     protected $_postal_code;
     protected $_country;
     protected $_process_currency;
-    protected $_return_url;
     protected $_cms;
     protected $_custom_fields;
 
@@ -57,7 +56,6 @@ class WebxpayPaymentManager
         $fields = [
             'first_name'=>$this->_first_name,
             'last_name'=>$this->_last_name,
-            'return_url'=>$this->_return_url,
             'email'=>$this->_email,
             'contact_number'=>$this->_contact_number,
             'address_line_one'=>$this->_address_line_one,
@@ -99,7 +97,13 @@ class WebxpayPaymentManager
 
         return [
             'signature_status'=>$signature_status,
-            'response'=>$responseVariables,
+            'response'=>[
+                'order_id'=>$responseVariables[0],
+                'order_refference_number'=>$responseVariables[1],
+                'date_time_transaction'=>$responseVariables[2],
+                'payment_gateway_used'=>$responseVariables[3],
+                'status_code'=>$responseVariables[4],
+            ],
             'custom_fields'=>$custom_fields_varible,
         ];
     }

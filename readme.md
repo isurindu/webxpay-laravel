@@ -77,7 +77,6 @@ class PaymentController extends Controller
             return Webxpay::redirect([
                 'order_id'=>'102',
                 'price'=>'100',
-                'return_url'=>'http://isurindu.test/payment/verify',
                 'first_name'=>'isurindu',
                 'last_name'=>'prabashwara',
                 'email'=>'hello@isurindu.com',
