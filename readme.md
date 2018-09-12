@@ -89,8 +89,6 @@ class PaymentController extends Controller
                 'state'=>'',
                 'postal_code'=>'',
                 'country'=>'',
-                'return_url'=>'http://yourdomain.com/payment-verify',
-
             ]);
 
     }
